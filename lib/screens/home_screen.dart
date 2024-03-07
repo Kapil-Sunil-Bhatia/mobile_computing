@@ -154,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
       // Get the first location from the results (you can handle multiple suggestions differently)
       Location location = locations.first;
       setState(() {
-        _initialLocation = LatLng(location.latitude!, location.longitude!);
+        _initialLocation = LatLng(location.latitude, location.longitude);
         controller.move(
             _initialLocation!, 16); // Center map on the searched location
       });
