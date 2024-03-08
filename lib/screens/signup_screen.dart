@@ -20,10 +20,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.blue,
         elevation: 0,
         title: const Text(
-          "Sign Up",
+          "SIGNUP",
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
       ),
@@ -41,6 +41,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             padding: EdgeInsets.fromLTRB(20, 120, 20, 0),
             child: Column(
               children: <Widget>[
+                logoWidget("assets/images/signup.png"),
                 const SizedBox(
                   height: 20,
                 ),

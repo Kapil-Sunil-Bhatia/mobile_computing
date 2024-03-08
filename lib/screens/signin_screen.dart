@@ -19,14 +19,23 @@ class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        elevation: 0,
+        title: const Text(
+          "LOGIN",
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+      ),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
-          hexStringToColor("2b8ecb"),
-          hexStringToColor("4678c4"),
-          hexStringToColor("5E61F4")
+          hexStringToColor("#c9f4fd"),
+          hexStringToColor("#c9f4fd"),
+          hexStringToColor("#c9f4fd")
         ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
         child: SingleChildScrollView(
           child: Padding(
@@ -34,12 +43,12 @@ class _SignInScreenState extends State<SignInScreen> {
                 20, MediaQuery.of(context).size.height * 0.2, 20, 0),
             child: Column(
               children: <Widget>[
-                logoWidget("assets/images/logo1.png"),
+                logoWidget("assets/images/6681204.png"),
                 const SizedBox(
                   height: 30,
                 ),
-                reusableTextField("Enter UserName", Icons.person_outline, false,
-                    _emailTextController),
+                reusableTextField("Enter User Name", Icons.person_outline,
+                    false, _emailTextController),
                 const SizedBox(
                   height: 20,
                 ),
@@ -75,15 +84,15 @@ class _SignInScreenState extends State<SignInScreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text("Don't have account?",
-            style: TextStyle(color: Colors.white70)),
+            style: TextStyle(color: Colors.black12)),
         GestureDetector(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SignUpScreen()));
+                MaterialPageRoute(builder: (context) => const SignUpScreen()));
           },
           child: const Text(
             " Sign Up",
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         )
       ],
@@ -98,7 +107,7 @@ class _SignInScreenState extends State<SignInScreen> {
       child: TextButton(
         child: const Text(
           "Forgot Password?",
-          style: TextStyle(color: Colors.white70),
+          style: TextStyle(color: Colors.black12),
           textAlign: TextAlign.right,
         ),
         onPressed: () => Navigator.push(

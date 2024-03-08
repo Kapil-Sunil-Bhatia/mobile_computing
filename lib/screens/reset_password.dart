@@ -17,7 +17,7 @@ class _ResetPasswordState extends State<ResetPassword> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.blue,
         elevation: 0,
         title: const Text(
           "Reset Password",
