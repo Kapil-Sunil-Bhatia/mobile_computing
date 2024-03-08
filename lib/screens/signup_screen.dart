@@ -34,9 +34,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
           height: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
-            hexStringToColor("2b8ecb"),
-            hexStringToColor("4678c4"),
-            hexStringToColor("5E61F4")
+            hexStringToColor("c9f4fd"),
+            hexStringToColor("c9f4fd"),
+            hexStringToColor("c9f4fd")
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
           child: SingleChildScrollView(
               child: Padding(
@@ -47,17 +47,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                reusableTextField("Enter UserName", Icons.person_outline, false,
+                reusableTextField("User Name", Icons.person_outline, false,
                     _userNameTextController),
                 const SizedBox(
                   height: 20,
                 ),
-                reusableTextField("Enter Email Id", Icons.person_outline, false,
+                reusableTextField("Email-Id", Icons.person_outline, false,
                     _emailTextController),
                 const SizedBox(
                   height: 20,
                 ),
-                reusableTextField("Enter Password", Icons.lock_outlined, true,
+                reusableTextField("Password", Icons.lock_outlined, true,
                     _passwordTextController),
                 const SizedBox(
                   height: 20,

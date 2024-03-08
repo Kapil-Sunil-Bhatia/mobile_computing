@@ -1,5 +1,3 @@
-// ignore_for_file: sort_child_properties_last
-
 import 'package:flutter/material.dart';
 
 Image logoWidget(String imageName) {
@@ -24,16 +22,16 @@ TextField reusableTextField(String text, IconData icon, bool isPasswordType,
     decoration: InputDecoration(
       prefixIcon: Icon(
         icon,
-        color: Colors.black26,
+        color: Colors.black,
       ),
       labelText: text,
-      labelStyle: TextStyle(color: Colors.black.withOpacity(0.9)),
+      labelStyle: TextStyle(color: Colors.black.withOpacity(1)),
       filled: true,
       floatingLabelBehavior: FloatingLabelBehavior.never,
-      fillColor: Colors.black.withOpacity(0.3),
+      fillColor: Colors.black.withOpacity(0),
       border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30.0),
-          borderSide: const BorderSide(width: 0, style: BorderStyle.none)),
+          borderRadius: BorderRadius.circular(3.0),
+          borderSide: const BorderSide(width: 0, style: BorderStyle.solid)),
     ),
     keyboardType: isPasswordType
         ? TextInputType.visiblePassword
@@ -51,22 +49,22 @@ Container firebaseUIButton(BuildContext context, String title, Function onTap) {
       onPressed: () {
         onTap();
       },
-      child: Text(
-        title,
-        style: const TextStyle(
-            color: Color.fromARGB(221, 22, 0, 0),
-            fontWeight: FontWeight.bold,
-            fontSize: 16),
-      ),
       style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.pressed)) {
-              return Colors.black26;
+              return Colors.blue;
             }
             return Colors.blue;
           }),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)))),
+      child: Text(
+        title,
+        style: const TextStyle(
+            color: Color.fromARGB(225, 255, 255, 255),
+            fontWeight: FontWeight.bold,
+            fontSize: 16),
+      ),
     ),
   );
 }

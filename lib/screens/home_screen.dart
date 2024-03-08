@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: const Text("MC App"),
+        title: const Text("Google Maps"),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.logout_rounded),
@@ -86,10 +86,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           decoration: BoxDecoration(
                               color: Colors.blue.withOpacity(0.2),
                               shape: BoxShape.circle),
-                          child: Icon(
+                          child: const Icon(
                             Icons.pin_drop,
                             size: 20,
-                            color: Colors.red.shade800,
+                            color: Colors.red,
                           ),
                         ),
                         rotate: true,

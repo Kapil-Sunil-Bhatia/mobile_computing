@@ -35,7 +35,7 @@ class LocationService {
     await NominatimGeocoding.init(reqCacheNum: 20);
     Geocoding geocoding = await NominatimGeocoding.to.forwardGeoCoding(
       const Address(
-        city: 'ulwe',
+        city: 'mumbai',
         postalCode: 410206,
       ),
     );

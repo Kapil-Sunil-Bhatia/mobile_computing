@@ -45,16 +45,16 @@ class _SignInScreenState extends State<SignInScreen> {
                 20, MediaQuery.of(context).size.height * 0.2, 20, 0),
             child: Column(
               children: <Widget>[
-                logoWidget("assets/images/6681204.png"),
+                logoWidget("assets/images/login.png"),
                 const SizedBox(
                   height: 30,
                 ),
-                reusableTextField("Enter User Name", Icons.person_outline,
-                    false, _emailTextController),
+                reusableTextField("Email ID", Icons.person_outline, false,
+                    _emailTextController),
                 const SizedBox(
                   height: 20,
                 ),
-                reusableTextField("Enter Password", Icons.lock_outline, true,
+                reusableTextField("Password", Icons.lock_outline, true,
                     _passwordTextController),
                 const SizedBox(
                   height: 5,
@@ -88,7 +88,7 @@ class _SignInScreenState extends State<SignInScreen> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text("Don't have account?",
-            style: TextStyle(color: Colors.black12)),
+            style: TextStyle(color: Colors.black)),
         GestureDetector(
           onTap: () {
             Navigator.push(context,
@@ -111,7 +111,7 @@ class _SignInScreenState extends State<SignInScreen> {
       child: TextButton(
         child: const Text(
           "Forgot Password?",
-          style: TextStyle(color: Colors.black12),
+          style: TextStyle(color: Colors.black),
           textAlign: TextAlign.right,
         ),
         onPressed: () => Navigator.push(context,
