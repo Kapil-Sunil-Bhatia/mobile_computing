@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurpleAccent,
+        backgroundColor: Colors.blue,
         // leading: IconButton(
         //   icon: Icon(Icons.arrow_back),
         //   tooltip: "Cancel and Return to List",
@@ -47,11 +47,11 @@ class _HomeScreenState extends State<HomeScreen> {
         //   },
         // ),
         // automaticallyImplyLeading: false,
-        title: const Text("Mobile Computing"),
+        title: const Text("MC App"),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.logout_rounded),
-            tooltip: "Save Todo and Retrun to List",
+            tooltip: "Save Todo and Return to List",
             onPressed: () {
               FirebaseAuth.instance.signOut().then((value) {
                 print("Signed Out");
