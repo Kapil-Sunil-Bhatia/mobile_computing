@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, avoid_print
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -39,14 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        // leading: IconButton(
-        //   icon: Icon(Icons.arrow_back),
-        //   tooltip: "Cancel and Return to List",
-        //   onPressed: () {
-        //     Navigator.pop(context, true);
-        //   },
-        // ),
-        // automaticallyImplyLeading: false,
         title: const Text("MC App"),
         actions: <Widget>[
           IconButton(

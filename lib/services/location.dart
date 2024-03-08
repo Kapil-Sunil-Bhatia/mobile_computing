@@ -1,3 +1,5 @@
+// ignore_for_file: unrelated_type_equality_checks, avoid_print
+
 import 'dart:async';
 import 'dart:io';
 
@@ -33,8 +35,8 @@ class LocationService {
     await NominatimGeocoding.init(reqCacheNum: 20);
     Geocoding geocoding = await NominatimGeocoding.to.forwardGeoCoding(
       const Address(
-        city: 'bhiwandi',
-        postalCode: 421302,
+        city: 'ulwe',
+        postalCode: 410206,
       ),
     );
     print(geocoding);
